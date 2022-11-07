@@ -1,0 +1,32 @@
+<div>
+  <mat-toolbar color="accent" class="center">
+    <span>Rick and Morty episodes!</span>
+  </mat-toolbar>
+
+  <div class="center">
+    <mat-form-field class="width" appearance="fill">
+      <mat-label>Search by name</mat-label>
+      <input matInput type="text" [(ngModel)]="value" class="form-field" (input)="selectName()">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Name" (click)="value=''">
+        <mat-icon (click)="_resetQueryName()">close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
+
+  <mat-toolbar color="warn" class="center" *ngIf="error">
+    <span>No such episodes</span>
+  </mat-toolbar>
+
+<ng-container *ngIf="episodes.length > 0 || error">
+  <mat-paginator class="center"
+                 [length]="info.count"
+                 [pageSize]="20"
+                 [pageSizeOptions]="[20]"
+                 aria-label="Select page">
+  </mat-paginator>
+</ng-container>
+
+<app-episodes *ngIf="!error" [episodes]="episodes"></app-episodes>
+
+

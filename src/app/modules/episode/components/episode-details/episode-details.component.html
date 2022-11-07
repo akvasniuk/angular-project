@@ -1,0 +1,17 @@
+<div>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row class="header">
+      <button mat-raised-button color="warn" class="header width"
+              (click)="switchToPreviousPage()">Previous page</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="header">
+      <div>{{episode.name}}</div>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="header gap">
+      <p>Episode: {{episode.episode}}</p>
+      <span>Air date: {{episode.air_date}}</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<app-characters [charactersUrl]="episode.characters"></app-characters>

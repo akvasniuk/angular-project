@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+  <mat-card-title>{{episode.name}}</mat-card-title>
+  <mat-card-content>
+    <p>{{episode.episode}}</p>
+    <p>{{episode.air_date}}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button mat-button (click)="getDetails()">Episode details</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="determinate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
