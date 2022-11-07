@@ -1,5 +1,7 @@
 # Angular-project
 
+If you get an error, then run npm install command in the project folder.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
 ## Development server
